@@ -1,8 +1,6 @@
 from tkinter import *
-
 root = Tk()
 root.geometry('275x283')
-
 
 # Solve the Sudoku
 class SolveSudo():
@@ -46,7 +44,6 @@ class SolveSudo():
             for y in range(0, 9):
                 if savedNumbers[x][y].get() == '0':
                     return x, y
-
         return -1, -1
 
     # Check the Validity of savedNumbers[i][j]
@@ -107,7 +104,6 @@ class startup():
         # Front-End Menu
         menu = Menu(master)
         master.config(menu=menu)
-
         file = Menu(menu)
         menu.add_cascade(label='File', menu=file)
         file.add_command(label='Exit', command=master.quit)
@@ -133,7 +129,6 @@ class startup():
     # Calls the class SolveSudoku
     def solveInput(self):
         solution = SolveSudo()
-
 
 # Global Matrix where are stored the numbers
 savedNumbers = []
